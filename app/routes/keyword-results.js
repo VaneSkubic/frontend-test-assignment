@@ -4,7 +4,7 @@ import { service } from '@ember/service';
 export default class KeywordResultsRoute extends Route {
   @service dataFetcher;
 
-  async model() {
+  model() {
     return this.dataFetcher.fetchKeywordResults();
   }
 }
