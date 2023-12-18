@@ -1,9 +1,9 @@
 <tr>
     <td class="query">{{@keyword.query}}</td>
-    <td class="position">{{@keyword.position}}</td>
-    <td>{{@keyword.searchVolume}}</td>
-    <td>{{@keyword.resultCount}}</td>
-    <td>{{@keyword.lastMonthChange}}</td>
-    <td>{{@keyword.competitorAverageRank}}</td>
-    <td>{{@keyword.bestCompetitorPosition}}</td>
+    <td class="number">{{format-number @keyword.position}}</td>
+    <td class="number">{{format-number @keyword.searchVolume}}</td>
+    <td class="number">{{format-number @keyword.resultCount}}</td>
+    <td class="number">{{format-number @keyword.lastMonthChange}}</td>
+    <td class="number">{{format-number @keyword.competitorAverageRank}}</td>
+    <td class="number">{{format-number @keyword.bestCompetitorPosition}}</td>
 </tr>
