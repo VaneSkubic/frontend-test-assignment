@@ -1,1 +1,65 @@
-/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+@font-face {
+    font-family: "proxima-nova";
+    src:
+        url("/assets/fonts/Fontspring-DEMO-proximanova-regular.otf") format("opentype"),
+        url("/assets/fonts/Fontspring-DEMO-proximanova-medium.otf") format("opentype"),
+        url("/assets/fonts/Fontspring-DEMO-proximanova-black.otf") format("opentype"),
+        url("/assets/fonts/Fontspring-DEMO-proximanova-bold.otf") format("opentype"),
+        url("/assets/fonts/Fontspring-DEMO-proximanova-extrabold.otf") format("opentype"),
+        url("/assets/fonts/Fontspring-DEMO-proximanova-light.otf") format("opentype"),
+        url("/assets/fonts/Fontspring-DEMO-proximanova-semibold.otf") format("opentype"),
+        url("/assets/fonts/Fontspring-DEMO-proximanova-thin.otf") format("opentype");
+}
+
+body {
+    background: #151515;
+    color: white;
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: "proxima-nova", sans-serif; */
+    font-size: 14px;
+}
+
+.page-title {
+    font-weight: 400;
+}
+
+#data-table {
+    border-radius: 4px;
+    background-color: #1d1d1d;
+    border-collapse: collapse;
+    border-style: hidden;
+    margin: 20px 0;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #222223;
+}
+
+tbody tr:nth-child(even):hover {
+    background-color: #222223;
+}
+
+tbody tr:nth-child(odd):hover {
+    background-color: #272728;
+}
+
+table td,
+table th {
+    font-weight: 400;
+    border: 1px solid black;
+    padding: 8px 16px;
+    text-align: left;
+}
+
+.query {
+    font-weight: 700;
+}
+
+.position {
+    font-size: 18px;
+}

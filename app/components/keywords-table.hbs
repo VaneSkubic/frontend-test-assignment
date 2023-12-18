@@ -1,0 +1,18 @@
+<table id="data-table">
+    <thead>
+        <tr>
+            <th>Query</th>
+            <th>Position</th>
+            <th>Search Volume</th>
+            <th>Result Count</th>
+            <th>Last Month Change</th>
+            <th>Average Competitor Rank</th>
+            <th>Best Competitor Rank</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each @keywords as |keyword|}}
+        <KeywordsTableRow @keyword={{keyword}} />
+        {{/each}}
+    </tbody>
+</table>
