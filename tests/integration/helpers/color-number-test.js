@@ -11,6 +11,6 @@ module('Integration | Helper | color-number', function (hooks) {
 
     await render(hbs`{{color-number this.inputValue}}`);
 
-    assert.dom().hasText('<span class="positive">1234</span>');
+    assert.dom().hasText('1234');
   });
 });

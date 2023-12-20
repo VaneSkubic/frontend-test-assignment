@@ -13,7 +13,7 @@ export function colorNumber([value]) {
     className = 'positive';
   }
 
-  return htmlSafe(`<span class="${className}">${value.replace('-', '')}</span>`);
+  return htmlSafe(`<span class='${className}'>${value.replace('-', '')}</span>`);
 }
 
 export default buildHelper(colorNumber);

@@ -8,6 +8,7 @@ export default class DataFetcherService extends Service {
     // }
 
     const response = await fetch('/api/keywords');
+
     if (!response.ok) {
       throw new Error('Failed to fetch keywords');
     }
