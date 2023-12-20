@@ -37,3 +37,7 @@ To run the application on your local machine:
 1. **Single Endpoint**: The application's backend API has been designed with a single endpoint to serve the necessary data for the frontend. 
 
 2. **Data Merging**: On the backend, data from two separate files (`keywords-results` and `competitors-data`) are merged before being sent to the frontend. This approach ensures that the frontend receives a consolidated view of the data, necessary for displaying in the table, without the need to perform complex data manipulations client-side.
+
+### Assumptions
+
+4. **Dynamic Columns Interpretation**: It was assumed that a 'dynamic' column refers to a column whose values are calculated based on data from another file, linked by the ID of the keyword (in this case from `competitors-data.json`). 
