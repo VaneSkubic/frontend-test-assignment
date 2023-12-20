@@ -1,18 +1,23 @@
-<table id="data-table">
-    <thead>
-        <tr>
-            <th>Keywords</th>
-            <th>Position</th>
-            <th>SV (global)</th>
-            <th>Result Count</th>
-            <th>Last Month Change</th>
-            <th>Average Competitor Rank</th>
-            <th>Best Competitor Rank</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each @keywords as |keyword|}}
-        <KeywordsTableRow @keyword={{keyword}} />
-        {{/each}}
-    </tbody>
-</table>
+<div class="wrapper">
+    <div class="filter-input">
+        <input id="filter-input" type="text" {{on "input" this.updateFilter}} />
+    </div>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Keywords</th>
+                <th>Position</th>
+                <th>SV (global)</th>
+                <th>Result Count</th>
+                <th>Last Month Change</th>
+                <th>Average Competitor Rank</th>
+                <th>Best Competitor Rank</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each this.filteredKeywords as |keyword|}}
+            <KeywordsTableRow @keyword={{keyword}} />
+            {{/each}}
+        </tbody>
+    </table>
+</div>

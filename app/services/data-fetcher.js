@@ -2,9 +2,12 @@ import Service from '@ember/service';
 
 export default class DataFetcherService extends Service {
   async fetchKeywordResults() {
-    if (true) {
-      throw new Error('Failed to fetch keywords');
-    }
+
+    // Test empty table state
+    // if (true) {
+    //   throw new Error('Failed to fetch keywords');
+    // }
+
     const response = await fetch('/api/keywords');
     if (!response.ok) {
       throw new Error('Failed to fetch keywords');
