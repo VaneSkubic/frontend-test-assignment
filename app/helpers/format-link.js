@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import { helper as buildHelper } from '@ember/component/helper';
 
-export function formatNumber([value, ...rest]) {
+export function formatLink([value]) {
   if (value == null) {
     value = '-';
   } else if (value == '/') {
@@ -10,4 +10,4 @@ export function formatNumber([value, ...rest]) {
   return value;
 }
 
-export default Ember.Helper.helper(formatNumber);
+export default buildHelper(formatLink);

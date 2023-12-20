@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import { helper as buildHelper } from '@ember/component/helper';
 
-export function formatNumber([value, ...rest]) {
+export function colorNumber([value]) {
   let className;
 
   if (value[0] == '-') {
@@ -15,4 +15,4 @@ export function formatNumber([value, ...rest]) {
   return `<span class="${className}">${value.replace('-', '')}</span>`;
 }
 
-export default Ember.Helper.helper(formatNumber);
+export default buildHelper(colorNumber);

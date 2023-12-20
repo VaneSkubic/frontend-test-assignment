@@ -70,7 +70,7 @@ body {
   caret-color: white;
   color: white;
   font-family: Poppins, Arial, Helvetica, sans-serif;
-  background-image: url(/assets/icon-search-wh.svg);
+  background-image: url("/assets/icon-search-wh.svg");
   background-size: 18px;
   background-position: 11px;
   background-repeat: no-repeat;
@@ -88,6 +88,14 @@ body {
   border-style: hidden;
   min-width: 1200px;
   overflow-x: auto;
+}
+
+table td,
+table th {
+  font-weight: 400;
+  border: 1px solid black;
+  padding: 8px 16px;
+  text-align: left;
 }
 
 .empty td {
@@ -111,14 +119,6 @@ tbody tr:nth-child(even):hover {
 
 tbody tr:nth-child(odd):hover {
   background-color: #272728;
-}
-
-table td,
-table th {
-  font-weight: 400;
-  border: 1px solid black;
-  padding: 8px 16px;
-  text-align: left;
 }
 
 table th.true::after {

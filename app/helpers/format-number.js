@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import { helper as buildHelper } from '@ember/component/helper';
 
-export function formatNumber([value, ...rest]) {
+export function formatNumber([value]) {
   if (value === null || value === undefined || value === '') {
     return '/';
   }
@@ -36,4 +36,4 @@ function formatLargeNumber(value, divisor, suffix) {
   return `${formattedValue}${suffix}`;
 }
 
-export default Ember.Helper.helper(formatNumber);
+export default buildHelper(formatNumber);
