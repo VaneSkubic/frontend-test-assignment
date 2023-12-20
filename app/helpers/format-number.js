@@ -5,7 +5,12 @@ export function formatNumber([value, ...rest]) {
     return '/';
   }
 
-  if (!Number.isInteger(value)) {
+  if (value == 'appeared') {
+    value = '∞'
+  } else if (value == 'disappeared') {
+    value = '-∞'
+  }
+  else if (!Number.isInteger(value)) {
     value = parseFloat(value.toFixed(1));
   }
 

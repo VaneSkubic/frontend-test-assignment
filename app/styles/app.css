@@ -6,7 +6,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
 
@@ -83,10 +83,27 @@ table th {
     text-align: left;
 }
 
+table th:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
 .query {
     font-weight: 700;
 }
 
 .number {
     font-size: 18px;
+}
+
+.negative {
+    color: #d8232e;
+}
+
+.zero {
+    color: white;
+}
+
+.positive {
+    color: #27b14e;
 }
