@@ -7,7 +7,6 @@ export function formatNumber([value, ...rest]) {
 
   if (!Number.isInteger(value)) {
     value = parseFloat(value.toFixed(1));
-    console.log(value);
   }
 
   if (value >= 1000000000) {
