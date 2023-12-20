@@ -5,17 +5,17 @@
     <table id="data-table">
         <thead>
             <tr>
-                <th>Keywords</th>
-                <th>Position</th>
-                <th>SV (global)</th>
-                <th>Result Count</th>
-                <th>Last Month Change</th>
-                <th>Average Competitor Rank</th>
-                <th>Best Competitor Rank</th>
+                <th {{on "click" (fn this.updateSort "query" )}}>Keywords</th>
+                <th {{on "click" (fn this.updateSort "position" )}}>Position</th>
+                <th {{on "click" (fn this.updateSort "searchVolume" )}}>SV (global)</th>
+                <th {{on "click" (fn this.updateSort "resultCount" )}}>Result Count</th>
+                <th {{on "click" (fn this.updateSort "lastMonthChange" )}}>Last Month Change</th>
+                <th {{on "click" (fn this.updateSort "competitorAverageRank" )}}>Average Competitor Rank</th>
+                <th {{on "click" (fn this.updateSort "bestCompetitorPositon" )}}>Best Competitor Rank</th>
             </tr>
         </thead>
         <tbody>
-            {{#each this.filteredKeywords as |keyword|}}
+            {{#each this.filteredAndSortedKeywords as |keyword|}}
             <KeywordsTableRow @keyword={{keyword}} />
             {{/each}}
         </tbody>
