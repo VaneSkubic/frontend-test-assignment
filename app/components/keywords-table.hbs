@@ -24,10 +24,18 @@
                     Competitor Rank</th>
             </tr>
         </thead>
+        {{#if @empty}}
+        {{#each this.filteredAndSortedKeywords as |keyword|}}
         <tbody>
-            {{#each this.filteredAndSortedKeywords as |keyword|}}
             <KeywordsTableRow @keyword={{keyword}} />
-            {{/each}}
         </tbody>
+        {{/each}}
+        {{else}}
+        <tbody class="empty">
+            <td colspan="7">
+                Failed to fetch data.
+            </td>
+        </tbody>
+        {{/if}}
     </table>
 </div>

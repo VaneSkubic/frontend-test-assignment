@@ -1,9 +1,9 @@
 body {
   background: #151515;
   color: white;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 14px;
-  margin: 0 0;
+  margin: 0;
 }
 
 .lds-ring {
@@ -23,7 +23,7 @@ body {
   border: 8px solid #fff;
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #fff transparent transparent transparent;
+  border-color: #fff transparent transparent;
 }
 
 .lds-ring div:nth-child(1) {
@@ -69,7 +69,7 @@ body {
   border-radius: 4px;
   caret-color: white;
   color: white;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   background-image: url(/assets/icon-search-wh.svg);
   background-size: 18px;
   background-position: 11px;
@@ -87,6 +87,18 @@ body {
   border-collapse: collapse;
   border-style: hidden;
   min-width: 1200px;
+  overflow-x: auto;
+}
+
+.empty td {
+  padding: 28px;
+  text-align: center;
+  color: #83807d;
+  font-size: 18px;
+}
+
+tbody tr:hover {
+  cursor: pointer;
 }
 
 tbody tr:nth-child(odd) {
@@ -101,10 +113,6 @@ tbody tr:nth-child(odd):hover {
   background-color: #272728;
 }
 
-tbody tr:hover {
-  cursor: pointer;
-}
-
 table td,
 table th {
   font-weight: 400;
@@ -114,7 +122,7 @@ table th {
 }
 
 table th.true::after {
-  content: url(/assets/sort-asc.svg);
+  content: url("/assets/sort-asc.svg");
   width: 8px;
   height: 5px;
   margin-left: 6px;
@@ -123,7 +131,7 @@ table th.true::after {
 }
 
 table th.false::after {
-  content: url(/assets/sort-desc.svg);
+  content: url("/assets/sort-desc.svg");
   width: 8px;
   height: 5px;
   margin-left: 6px;
@@ -166,7 +174,7 @@ table th:hover {
 }
 
 .negative::before {
-  content: url(/assets/down-arrow.svg);
+  content: url("/assets/down-arrow.svg");
   width: 10px;
   height: 10px;
   margin-right: 4px;
@@ -182,7 +190,7 @@ table th:hover {
 }
 
 .positive::before {
-  content: url(/assets/up-arrow.svg);
+  content: url("/assets/up-arrow.svg");
   width: 10px;
   height: 10px;
   margin-right: 4px;
