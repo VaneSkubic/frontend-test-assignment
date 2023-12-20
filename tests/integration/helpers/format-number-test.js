@@ -6,12 +6,19 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Helper | format-number', function (hooks) {
   setupRenderingTest(hooks);
 
-  // TODO: Replace this with your real tests.
-  test('it renders', async function (assert) {
-    this.set('inputValue', '1234');
+  test('it writes out ∞ when value is "appeared"', async function (assert) {
+    this.set('inputValue', 'appeared');
 
     await render(hbs`{{format-number this.inputValue}}`);
 
-    assert.dom().hasText('1234');
+    assert.dom().hasText('∞');
+  });
+
+  test('it writes out -∞ when value is "disappeared"', async function (assert) {
+    this.set('inputValue', 'disappeared');
+
+    await render(hbs`{{format-number this.inputValue}}`);
+
+    assert.dom().hasText('-∞');
   });
 });

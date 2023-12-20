@@ -4,7 +4,7 @@ export default class DataFetcherService extends Service {
   async fetchKeywordResults() {
     // Test empty table state
     // if (true) {
-    //   throw new Error('Failed to fetch keywords');
+    //   throw new Error('Failed to fetch data.');
     // }
 
     const response = await fetch('/api/keywords');

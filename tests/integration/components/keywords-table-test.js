@@ -6,21 +6,21 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Component | keywords-table', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+  test('it renders with data', async function (assert) {
+    this.set('sampleData', [{}]);
+    await render(hbs`<KeywordsTable @keywords={{this.sampleData}} />`);
 
-    await render(hbs`<KeywordsTable />`);
-
-    assert.dom().hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <KeywordsTable>
-        template block text
-      </KeywordsTable>
-    `);
-
-    assert.dom().hasText('template block text');
+    assert.dom('tbody').exists({ count: this.sampleData.length }, 'Correct number of rows rendered');
   });
+
+  test('empty state', async function (assert) {
+    await render(hbs`<KeywordsTable @error={{1}} @keywords={{null}} />`);
+    assert.dom('.empty').hasText('No keywords to show.', 'Empty state is rendered correctly');
+  });
+
+  test('error state', async function (assert) {
+    await render(hbs`<KeywordsTable @error={{0}} @keywords={{null}} />`);
+    assert.dom('.empty').hasText('Failed to fetch data.', 'Error state is rendered correctly');
+  });
+
 });

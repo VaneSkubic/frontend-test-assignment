@@ -6,12 +6,18 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Helper | format-link', function (hooks) {
   setupRenderingTest(hooks);
 
-  // TODO: Replace this with your real tests.
-  test('it renders', async function (assert) {
-    this.set('inputValue', '1234');
+  test('it adds "-" to empty link', async function (assert) {
+    this.set('inputValue', null);
 
     await render(hbs`{{format-link this.inputValue}}`);
 
-    assert.dom().hasText('1234');
+    assert.dom().hasText('-');
+  });
+  test('it adds (index) to "/"', async function (assert) {
+    this.set('inputValue', null);
+
+    await render(hbs`{{format-link this.inputValue}}`);
+
+    assert.dom().hasText('-');
   });
 });
