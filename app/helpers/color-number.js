@@ -7,11 +7,10 @@ export function formatNumber([value, ...rest]) {
     className = 'negative';
   } else if (value === '0') {
     className = 'zero';
-    value = '•'
+    value = '•';
   } else {
     className = 'positive';
   }
-
 
   return `<span class="${className}">${value.replace('-', '')}</span>`;
 }

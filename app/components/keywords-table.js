@@ -24,8 +24,8 @@ export default class KeywordsTableComponent extends Component {
 
     @computed('args.keywords', 'filterText', 'sortColumn', 'sortAscending')
     get filteredAndSortedKeywords() {
-        let filteredKeywords = this.args.keywords.filter(keyword =>
-            keyword.query.toLowerCase().includes(this.filterText)
+        let filteredKeywords = this.args.keywords.filter((keyword) =>
+            keyword.query.toLowerCase().includes(this.filterText),
         );
 
         return filteredKeywords.sort((a, b) => {

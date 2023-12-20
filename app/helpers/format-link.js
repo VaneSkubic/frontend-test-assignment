@@ -1,11 +1,10 @@
 import Ember from 'ember';
 
 export function formatNumber([value, ...rest]) {
-
   if (value == null) {
-    value = '-'
+    value = '-';
   } else if (value == '/') {
-    value = '/ (index)'
+    value = '/ (index)';
   }
 
   return value;

@@ -112,6 +112,24 @@ table th {
   text-align: left;
 }
 
+table th.true::after {
+  content: url(/assets/sort-asc.svg);
+  width: 8px;
+  height: 5px;
+  margin-left: 6px;
+  position: relative;
+  bottom: 2px;
+}
+
+table th.false::after {
+  content: url(/assets/sort-desc.svg);
+  width: 8px;
+  height: 5px;
+  margin-left: 6px;
+  position: relative;
+  bottom: 2px;
+}
+
 table th:hover {
   opacity: 0.7;
   cursor: pointer;
