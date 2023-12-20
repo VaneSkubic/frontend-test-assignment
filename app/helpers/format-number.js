@@ -25,6 +25,7 @@ export function formatNumber([value, ...rest]) {
     return formatLargeNumber(value, 1000, 'K');
   }
 
+
   return value.toString();
 }
 

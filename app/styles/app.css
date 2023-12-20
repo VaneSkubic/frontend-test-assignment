@@ -134,6 +134,10 @@ table th:hover {
   text-decoration: underline;
 }
 
+.number {
+  position: relative;
+}
+
 .position {
   font-size: 18px;
 }
@@ -142,12 +146,25 @@ table th:hover {
   color: #d8232e;
 }
 
+.negative::before {
+  content: url(/assets/down-arrow.svg);
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+}
+
 .zero {
   color: #898989;
-  /* color: red; */
   font-size: 2rem;
 }
 
 .positive {
   color: #27b14e;
+}
+
+.positive::before {
+  content: url(/assets/up-arrow.svg);
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
 }

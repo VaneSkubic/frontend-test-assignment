@@ -12,7 +12,8 @@ export function formatNumber([value, ...rest]) {
     className = 'positive';
   }
 
-  return `<span class="${className}">${value}</span>`;
+
+  return `<span class="${className}">${value.replace('-', '')}</span>`;
 }
 
 export default Ember.Helper.helper(formatNumber);
