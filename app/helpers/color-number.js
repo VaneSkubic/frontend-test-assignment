@@ -1,4 +1,5 @@
 import { helper as buildHelper } from '@ember/component/helper';
+import { htmlSafe } from '@ember/template';
 
 export function colorNumber([value]) {
   let className;
@@ -12,7 +13,7 @@ export function colorNumber([value]) {
     className = 'positive';
   }
 
-  return `<span class="${className}">${value.replace('-', '')}</span>`;
+  return htmlSafe(`<span class="${className}">${value.replace('-', '')}</span>`);
 }
 
 export default buildHelper(colorNumber);
