@@ -24,12 +24,20 @@
                     Competitor Rank</th>
             </tr>
         </thead>
-        {{#if @empty}}
+        {{#if @error}}
+        {{#if this.filteredAndSortedKeywords.length}}
         {{#each this.filteredAndSortedKeywords as |keyword|}}
         <tbody>
             <KeywordsTableRow @keyword={{keyword}} />
         </tbody>
         {{/each}}
+        {{else}}
+        <tbody class="empty">
+            <td colspan="7">
+                No keywords to show.
+            </td>
+        </tbody>
+        {{/if}}
         {{else}}
         <tbody class="empty">
             <td colspan="7">
