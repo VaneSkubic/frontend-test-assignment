@@ -1,56 +1,39 @@
-# frontend-test-assignment
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+# Frontend test assignment
+
+## Description
+An Ember.js application that dynamically loads tabular data with two dynamic columns. 
 
 ## Prerequisites
-
-You will need the following things properly installed on your computer.
-
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://cli.emberjs.com/release/)
-* [Google Chrome](https://google.com/chrome/)
+Before you begin, ensure you have met the following requirements:
+* You have installed [Node.js](https://nodejs.org/en/) (which includes npm).
+* You have installed [Ember CLI](https://ember-cli.com/).
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd frontend-test-assignment`
-* `npm install`
+To install the application, follow these steps:
 
-## Running / Development
+1. Clone the repository:
+`git clone https://github.com/VaneSkubic/frontend-test-assignment`
 
-* `npm run start`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+2. Navigate to the application directory:
+`cd frontend-test-assignment`
 
-### Code Generators
+3. Install the dependencies:
+`npm install`
 
-Make use of the many generators for code, try `ember help generate` for more details
+## Running the Application 
+To run the application on your local machine: 
 
-### Running Tests
+1.  Start the Ember server:
+`ember serve`
 
-* `npm run test`
-* `npm run test:ember -- --server`
+2. Open your browser and navigate to `http://localhost:4200`
 
-### Linting
+## Assumptions and Design Decisions
 
-* `npm run lint`
-* `npm run lint:fix`
+### API Design
 
-### Building
+1. **Single Endpoint**: The application's backend API has been designed with a single endpoint to serve the necessary data for the frontend. 
 
-* `npm exec ember build` (development)
-* `npm run build` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://cli.emberjs.com/release/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+2. **Data Merging**: On the backend, data from two separate files (`keywords-results` and `competitors-data`) are merged before being sent to the frontend. This approach ensures that the frontend receives a consolidated view of the data, necessary for displaying in the table, without the need to perform complex data manipulations client-side.
