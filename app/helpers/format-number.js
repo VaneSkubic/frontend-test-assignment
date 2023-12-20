@@ -6,11 +6,10 @@ export function formatNumber([value, ...rest]) {
   }
 
   if (value == 'appeared') {
-    value = '∞'
+    value = '∞';
   } else if (value == 'disappeared') {
-    value = '-∞'
-  }
-  else if (!Number.isInteger(value)) {
+    value = '-∞';
+  } else if (!Number.isInteger(value)) {
     value = parseFloat(value.toFixed(1));
   }
 

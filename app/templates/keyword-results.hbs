@@ -1,1 +1,5 @@
+{{#if this.model.length}}
 <KeywordsTable @keywords={{this.model}} />
+{{else}}
+<div class="empty-state">Failed to load data. Please try again later.</div>
+{{/if}}

@@ -2,6 +2,7 @@ import Model, { attr } from '@ember-data/model';
 
 export default class KeywordResultsModel extends Model {
   @attr query;
+  @attr uri;
   @attr position;
   @attr searchVolume;
   @attr resultCount;

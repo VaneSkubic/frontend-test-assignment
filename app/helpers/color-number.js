@@ -15,4 +15,3 @@ export function formatNumber([value, ...rest]) {
 }
 
 export default Ember.Helper.helper(formatNumber);
-

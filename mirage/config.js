@@ -42,6 +42,7 @@ function routes() {
       return {
         id: keyword.id,
         query: keyword.query,
+        uri: keyword.uri,
         position: keyword.position_organic,
         searchVolume: keyword.adwords_global_search_volume,
         resultCount: keyword.results_count,
