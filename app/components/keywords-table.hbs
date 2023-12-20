@@ -9,13 +9,13 @@
                     class="{{if (if-equals this.sortColumn 'query') this.sortAscending}}">Keywords</th>
                 <th {{on "click" (fn this.updateSort "position" )}}
                     class="{{if (if-equals this.sortColumn 'position') this.sortAscending}}">Position</th>
-                <th {{on "click" (fn this.updateSort "searchVolume" )}}
-                    class="{{if (if-equals this.sortColumn 'searchVolume') this.sortAscending}}">SV (global)</th>
                 <th {{on "click" (fn this.updateSort "resultCount" )}}
                     class="{{if (if-equals this.sortColumn 'resultCount') this.sortAscending}}">Result Count</th>
                 <th {{on "click" (fn this.updateSort "lastMonthChange" )}}
                     class="{{if (if-equals this.sortColumn 'lastMonthChange') this.sortAscending}}">Last Month Change
                 </th>
+                <th {{on "click" (fn this.updateSort "searchVolume" )}}
+                    class="{{if (if-equals this.sortColumn 'searchVolume') this.sortAscending}}">SV (global)</th>
                 <th {{on "click" (fn this.updateSort "competitorAverageRank" )}}
                     class="{{if (if-equals this.sortColumn 'competitorAverageRank') this.sortAscending}}">Average
                     Competitor Rank</th>

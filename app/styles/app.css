@@ -86,6 +86,7 @@ body {
   background-color: #1d1d1d;
   border-collapse: collapse;
   border-style: hidden;
+  min-width: 1200px;
 }
 
 tbody tr:nth-child(odd) {
