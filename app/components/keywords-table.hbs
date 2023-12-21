@@ -15,7 +15,8 @@
                 </th>
                 <th>
                     <button type="button" {{on "click" (fn this.updateSort "resultCount" )}}
-                        class="{{if (if-equals this.sortColumn 'resultCount') this.sortAscending}}">ResultCount</button>
+                        class="{{if (if-equals this.sortColumn 'resultCount') this.sortAscending}}">Result
+                        Count</button>
                 </th>
                 <th>
                     <button type="button" {{on "click" (fn this.updateSort "lastMonthChange" )}}
